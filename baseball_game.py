@@ -336,7 +336,7 @@ def main():
             continue
         is_continue = False
         while(True):
-            con_input = input("You win, one more(Y\/N)")
+            con_input = input("You win, one more(Y/N)")
 
             if((is_yes(con_input) == False)and(is_no(con_input)==False)):
                 print_input_again()
