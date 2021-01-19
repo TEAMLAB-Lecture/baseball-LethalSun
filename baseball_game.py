@@ -319,7 +319,7 @@ def main():
 
 
     while(True):
-        user_input = Input("Input guess number : ")
+        user_input = input("Input guess number : ")
 
         if(user_input == '0'):
             break
@@ -336,7 +336,7 @@ def main():
             continue
         is_continue = False
         while(True):
-            con_input = Input("You win, one more(Y\/N)")
+            con_input = input("You win, one more(Y\/N)")
 
             if((is_yes(con_input) == False)and(is_no(con_input)==False)):
                 print_input_again()
