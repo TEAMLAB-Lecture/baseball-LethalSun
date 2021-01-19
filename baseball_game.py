@@ -102,7 +102,6 @@ def is_duplicated_number(three_digit):
         digit_list[int(i)] +=1
     
     for i in digit_list:
-        print(i)
         if(i>1):
             return True
     # ==================================
