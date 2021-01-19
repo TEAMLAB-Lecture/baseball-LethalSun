@@ -169,19 +169,19 @@ def get_not_duplicated_three_digit_number():
 
     num_list = [1,2,3,4,5,6,7,8,9]
 
-    r = get_random_number()%10
+    r = random.randrange(0, 9)
 
     result = num_list[r]*100
 
     num_list[r] = 0
 
-    r = get_random_number()%10
+    r = random.randrange(0, 9)
 
     result += num_list[r]*10
 
     new_num_list = num_list[0:r] + num_list[r+1:]
 
-    r = get_random_number()%9
+    r = random.randrange(0, 8)
 
     result += new_num_list[r]
     
@@ -217,19 +217,18 @@ def get_strikes_or_ball(user_input_number, random_number):
     # ===Modify codes below=============
     # 조건에 따라 변환되어야 할 결과를 result 변수에 할당
 
-    stk = 0
-    bal = 0
+    result = [0,0]
     for i in range(0,3):
         if(user_input_number[i] == random_number[i]):
-            stk += 1
+            result[0] += 1
         else:
             for j in range(0,3):
                 if(user_input_number[i] == random_number[j]):
-                    bal += 1
+                    result[1] += 1
     
 
 
-    result = [stk,bal]
+    
     # ==================================
     return result
 
