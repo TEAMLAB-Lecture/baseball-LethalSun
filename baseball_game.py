@@ -102,10 +102,11 @@ def is_duplicated_number(three_digit):
         digit_list[int(i)] +=1
     
     for i in digit_list:
+        print(i)
         if(i>1):
-            return False
+            return True
     # ==================================
-    return True
+    return False
 
 
 def is_validated_number(user_input_number):
@@ -137,7 +138,7 @@ def is_validated_number(user_input_number):
     if(is_between_100_and_999(user_input_number) == False):
         return False
 
-    if(is_duplicated_number(user_input_number) == False):
+    if(is_duplicated_number(user_input_number) == True):
         return False
 
     # ==================================
